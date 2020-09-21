@@ -4,11 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuento Digital</title>
+    <style>
+        @keyframes move {
+            0% {
+                left: 0%;
+            }
+            50% {
+                left: 50%;
+            }
+            100% {
+                left: 0%;            
+            }
+        }
+        h1 {
+            position: relative;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const h1 = document.querySelector('h1');
+            h1.style.animationPlayState = 'paused';
+
+            document.querySelector('button').onclick = () => {
+                if (h1.style.animationPlayState === 'paused') {
+                    h1.style.animationPlayState = 'running';
+                } else {
+                    h1.style.animationPlayState = 'paused';
+                }
+            }
+        })
+    </script>
 </head>
 <body>
     
     <h1>Sur</h1>
+    <button>Parar</button>
     <p>
-        Era una isla alejada a unos 100km de chile en el pasifico  por lo que una ves que llegamos fuimos a buscar un lugar donde acampar, habia bastantes teerremotos leves ya que estabamos en el arco de furgo o algo asi. Por lo que en unaa oportunidad se callo parte del techo de un galpon que habia ahi abandonado. Demoramos bastante haci que a la <a href="tarde.html">Tarde</a>__ <a href="noche.html">Noche</a> Terminamos de bajar tdo del barco
+        Esta isla la cual no recuerdo el nombre ahora mismo es una isla alejada a unos cuantos kilómetros de Chile en el pasifico. 
+        El viaje demoró cerca de un día, en el cual  conocimos a otros que iban al mismo campamento. El trayecto final del viaje los 
+        miramos mucho, al haber olas de casi 2 metros. Pero  por suerte el barco en el que íbamos era un barco nuevo y contaba con mucha 
+        tecnología. Una vez que llegamos fuimos a buscar un lugar donde establecernos, había bastantes lomas y montañas cerca de la mayoría 
+        de las cabanas. Por lo que no había muchos lugares buenos pero conseguimos uno más o menos cerca de un lago, donde se podía notar 
+        que ya habían estado personas hay por unos troncos quemados.. Demoramos bastante buscando este lugar asique a la  <a href="tarde.html">Tarde</a>__ <a href="noche.html">Noche</a>  terminamos 
+        de bajar todo del barco.
+
+      
 </body>
 </html>
