@@ -4,6 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuento Digital</title>
+    <style>
+        @keyframes move {
+            0% {
+                left: 0%;
+            }
+            25% {
+                left: 50%;  
+            }
+            
+            50% {
+                left: 25%;
+                color: red;  
+            }
+            
+            75% {
+                left: 100%;
+                color: red;  
+            }
+            100% {
+                left: 0%;
+                color: red;  
+            }
+        }
+        h1 {
+            position: relative;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const h1 = document.querySelector('h1');
+            h1.style.animationPlayState = 'paused';
+
+            document.querySelector('button').onclick = () => {
+                if (h1.style.animationPlayState === 'paused') {
+                    h1.style.animationPlayState = 'running';
+                } else {
+                    h1.style.animationPlayState = 'paused';
+                }
+            }
+        })
+    </script>
 </head>
 <body>
     
@@ -11,6 +57,7 @@
       <source src="final.mov" type="video/mp4">
     </video>
     <h1>Lo mismo</h1>
+    <button>pausar/reproducir</button>
     <p>
         La historia comienza asi... Una cosa que no me animo mucho a contar es acerca de mi experiencia en el verano pasado, parece que fue hace mucho pero desde mi perspectiva ha pasado mucho más. La historia comienza así, había terminado de rendir los coloquios de unas cinco materias más o menos, ya que no me había ido muy bien durante las clases, por diferentes motivos. Bue cuestion que cuando termine de rendir fui con seis amigos hacia un campamento al que había ido hace ya unos años cuando tenía alrededor de 13. La isla estaba ubicada cerca de la polinesia que quedaba al <a href="camp1.html">Norte</a>___<a href="camp2.html">Sur</a> de una isla muy conocida el cual no recuerdo el nombre ahora mismo.
     </p>
