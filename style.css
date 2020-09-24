@@ -1,0 +1,14 @@
+body {
+  background: #2980B9;  
+  background: -webkit-linear-gradient( right, #FFFFFF, #6DD5FA, #b93a29);
+  background: linear-gradient( right, #FFFFFF, #6DD5FA, #b93a29); 
+}
+div {
+    padding: 200px; 
+    background: withe;
+}
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
